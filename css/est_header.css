@@ -3,7 +3,7 @@
 }
 
 header{
-    background: rgb(0, 0, 0);
+    background: rgb(148, 148, 148);
     height: 112px;
 }
 
@@ -23,7 +23,7 @@ header{
 }
 
 .link_login a:visited{
-    color: white; 
+    color:rgb(78, 78, 78) 
 }
 
 .link_login a:link{

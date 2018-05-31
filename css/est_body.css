@@ -1,18 +1,18 @@
 .main{
-    height: 2550px;
+    height: 2800px;
 }
 
-.cont_img{
+.slider{
     height: 550px;
 }
 
-.cont_img figure{
+.slider figure{
     height: 100%;
     width: 50%;
     float: left;
 }
 
-.cont_img figure img{
+.slider figure img{
     height: 550px;
     width: 100%;
 }
@@ -127,6 +127,21 @@
 
 }
 
+/*===========================CONTENEDOR 4===========================*/
+
+.comment div{
+    display: flex;
+    justify-content: center;
+    padding: 20px 60px;    
+}
+.comment div .slider_comentario{
+    padding: 20px;
+}
+
+.comment figure img{
+    width: 200px;
+}
+
 /*===========================FOOTER===========================*/
 
 footer{
@@ -135,26 +150,21 @@ footer{
     justify-content: flex-start;
     padding: 30px 30px 30px 60px;
     font-family: 'Muli', sans-serif;
-    position: relative;
-
+    position: relative; 
 }
 
 footer ul{
-
     list-style: none;
     margin: 0 30px;
     padding: 0;
-
 }
 
 
 footer ul li{
-
     margin: 10px 0px;
 }
 
 footer ul li a{
-
     text-decoration: none;
     color: rgb(0, 0, 0);
 }

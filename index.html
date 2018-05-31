@@ -7,7 +7,6 @@
 
     <title>MateriaGris</title>
 
-    <link rel="icon" href="images/MG.png">
     <link rel="stylesheet" href="css/est_header.css">
     <link rel="stylesheet" href="css/est_body.css">
 
@@ -16,6 +15,28 @@
     <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Muli:600" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Muli:300" rel="stylesheet">
+
+<!-- Links de JavaSrcipt para Sliders-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+
+<!-- Codigo JavaSrcipt Slider-->
+
+<script>
+    $(document).ready(function(){
+      $('.slider').bxSlider();
+    });
+</script>
+
+<script>
+    $(document).ready(function(){
+        $('.comment').bxSlider();
+    });
+</script>
+
+
+
 </head>
 
 <body>
@@ -25,7 +46,7 @@
 
         <div class="caja_log">
             <ul class="link_login">
-                    <li><a href="">Iniciar sesión</a></li>
+                    <li><a href="">Iniciar sesion</a></li>
                     <li><a href="">Registrarse</a></li>
             </ul>
         </div>
@@ -58,21 +79,59 @@
 <!--=========Cuerpo de la pagina web=======================-->
 
     <section class="main">
-   
-        <div class="cont_img">
-            <figure>
-                <img src="images/javalogo.png" alt="">
-            </figure>
-            <div class="slider_description">
-                <h1>Aprende este nuevo lenguaje</h1>
-                <h2>Solo en 4 sesiones !!</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, 
-                    cum culpa sint rem labore, quia accusantium nam quibusdam 
-                    voluptatem corporis, ipsa doloremque tempora maxime molestiae 
-                    fugit minus explicabo impedit nulla.
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        
+        <!-- Slider -->
+
+        <div class="slider">
+
+            <div>
+                <figure>
+                    <img src="images/javalogo.png" alt="logo1">
+                </figure>
+                <div class="slider_description">
+                    <h1>Aprende Unity</h1>
+                    <h2>Se el mejor en todo!!</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, 
+                        cum culpa sint rem labore, quia accusantium nam quibusdam 
+                        voluptatem corporis, ipsa doloremque tempora maxime molestiae 
+                        fugit minus explicabo impedit nulla.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
             </div>
+
+            <div>
+                <figure>
+                    <img src="images/java_orilogo.png" alt="logo2">
+                </figure>
+                <div class="slider_description">
+                    <h1>Con JAVA imagina todo</h1>
+                    <h2>Si te lo propones lo aprenderás</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, 
+                        cum culpa sint rem labore, quia accusantium nam quibusdam 
+                        voluptatem corporis, ipsa doloremque tempora maxime molestiae 
+                        fugit minus explicabo impedit nulla.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+            </div>
+            
+            <div>
+                <figure>
+                    <img src="images/clogo.jpg" alt="logo3">
+                </figure>
+                <div class="slider_description">
+                    <h1>C para todos!!</h1>
+                    <h2>Un lenguaje que nunca perderá su esencia</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, 
+                        cum culpa sint rem labore, quia accusantium nam quibusdam 
+                        voluptatem corporis, ipsa doloremque tempora maxime molestiae 
+                        fugit minus explicabo impedit nulla.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+            </div>
+            
         </div>
+
+        <!-- Cuerpo Neto-->
    
         <div class="contenedor2">
             <h1 id="CG"><a href="#">Cursos Gratuitos</a></h1>
@@ -160,6 +219,56 @@
 
         </div>
 
+        <div class="comment">
+            <div>
+                <figure>
+                    <img src="images/perfil1.jpg" alt="perfil1">
+                </figure>
+                <div class="slider_comentario">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, 
+                            cum culpa sint rem labore, quia accusantium nam quibusdam 
+                            voluptatem corporis, ipsa doloremque tempora maxime molestiae 
+                            fugit minus explicabo impedit nulla.
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            voluptatem corporis, ipsa doloremque tempora maxime molestiae 
+                            fugit minus explicabo impedit nulla.
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+            </div>
+
+            <div>
+                    <figure>
+                        <img src="images/perfil2.jpg" alt="perfil1">
+                    </figure>
+                    <div class="slider_comentario">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, 
+                                cum culpa sint rem labore, quia accusantium nam quibusdam 
+                                voluptatem corporis, ipsa doloremque tempora maxime molestiae 
+                                fugit minus explicabo impedit nulla.
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                voluptatem corporis, ipsa doloremque tempora maxime molestiae 
+                                fugit minus explicabo impedit nulla.
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+            </div>
+
+            <div>
+                    <figure>
+                        <img src="images/perfil3.jpg" alt="perfil1">
+                    </figure>
+                    <div class="slider_comentario">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, 
+                                cum culpa sint rem labore, quia accusantium nam quibusdam 
+                                voluptatem corporis, ipsa doloremque tempora maxime molestiae 
+                                fugit minus explicabo impedit nulla.
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                voluptatem corporis, ipsa doloremque tempora maxime molestiae 
+                                fugit minus explicabo impedit nulla.
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+            </div>
+        </div>
+
     </section>
 
     <footer>
@@ -186,7 +295,7 @@
            <a href="https://www.facebook.com/" target="_blank"><figure><img src="images/facebook.png" alt=""></figure></a>
            <a href="https://web.whatsapp.com/" target="_blank"><figure><img src="images/whastapp.png" alt=""></figure></a>
            <a href="https://twitter.com/?lang=es" target="_blank"><figure><img src="images/twiter.png" alt=""></figure></a>
-           <a href="https://github.com/ProyectoMateriaGris" target="_blank"><figure><img src="images/git.png" alt=""></figure></a>
+           <a href="https://github.com/" target="_blank"><figure><img src="images/git.png" alt=""></figure></a>
         </div>
 
     </footer>

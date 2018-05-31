@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+}
+
+ 
+
+img{
+    width: 100%;
+}
+
+.main{
+    position: absolute;
+    background: red;
+    width: 30%;
+    min-width: 300px;
+    top: 30px;
+    
+    
+
+} 
+
+.logo{
+    background: blue;
+
+}
+
+.logo figure img{
+    width: 80px;
+
+}
+
+.datos{
+    background: yellow;
+    
+}
+
+.datos div{
+    margin: 20px;
+    display: block;
+}
