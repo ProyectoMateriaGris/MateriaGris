@@ -5,10 +5,14 @@
     <title>Login</title>
 
     <link rel="stylesheet" href="css_login/est_login.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+
 </head>
 <body>
     
-    <img src="images/Paisaje_1.jpg" alt="">
+    
+    <img src="images/Paisaje_1.jpg" class="fondo" alt="">
+    <a class="cont_cerrar" href="index.html"><img class="cerrar" src="images/close.png" alt=""></a>
     <div class="main">
         
         <div class="logo">
@@ -17,23 +21,54 @@
             </figure>
 
         </div>
+
         <section class="datos">
             
-            <div>
-                    <p>Correo</p><input type="email" name="email" id="email">
+            <div class="div1">
+                <figure class="img_user"><img src="images/user.png" alt=""></figure>
+                <!--<label class="tag_correo" for="email">Correo</label>-->
+                <input type="email" name="email" id="email">
             </div>
-
-            <div>
-                    <p>Contraseña</p><input type="password" name="pass" id="pass">
+            <div class="div1">
+                <figure class="img_pass"><img src="images/contra.png" alt=""></figure>
+                <!--<label class="tag_pass" for="pass">Contraseña</label>-->
+                <input type="password" name="pass" id="pass">
             </div>
-
-            <div>
-                    <p><input type="checkbox" name="recordar" id="recordar">Recordarme</p>
+            <div class="check">   
+                <input type="checkbox" name="recordar" id="recordar">
+                <label class="tag_check" for="recordar">Recordarme</label>
             </div>
             
-            <button onclick="ingresar()">Ingresar</button>
+            <button class="boton_log" onclick="ingresar()">Ingresar</button>
         </section>
     </div>
 
+    <footer>
+            <ul>
+                <li> <a href="#CG"> Cursos gratuitos</a></li>
+                <li><a href="#CP">Cursos premium</a></li>
+                <li><a href="">Formas de pago</a></li>
+                <li><a href="">Donaciones</a></li>
+            </ul>
+    
+            <ul>
+                <li><a href="">¿Quiénes somos?</a></li>
+                <li><a href="">Vision</a></li>
+                <li><a href="">Mision</a></li>
+            </ul>
+    
+            <ul>
+                <li><a href="">¿Eres profesor?</a></li>
+                <li><a href="">Artículos</a></li>
+                <li><a href="">Talleres</a></li>
+            </ul>
+    
+            <div class="redes">
+               <a href="https://www.facebook.com/" target="_blank"><figure><img src="images/facebook.png" alt=""></figure></a>
+               <a href="https://web.whatsapp.com/" target="_blank"><figure><img src="images/whastapp.png" alt=""></figure></a>
+               <a href="https://twitter.com/?lang=es" target="_blank"><figure><img src="images/twiter.png" alt=""></figure></a>
+               <a href="https://github.com/" target="_blank"><figure><img src="images/git.png" alt=""></figure></a>
+            </div>
+    </footer>
 </body>
 </html>

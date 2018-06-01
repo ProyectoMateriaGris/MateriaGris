@@ -1,40 +1,152 @@
 *{
     margin: 0;
+    font-family: 'Raleway', sans-serif;
 }
 
- 
-
-img{
-    width: 100%;
+.fondo{
+position: absolute;
+width: 100%;
+height: 100%;
+opacity: 0.8;
 }
 
 .main{
+    background: rgba(20, 20, 20, 0.911);
     position: absolute;
-    background: red;
     width: 30%;
     min-width: 300px;
-    top: 30px;
-    
-    
+    top: 80px;
+    left: 35%;
+    text-align: center;
 
+    border-radius: 3px;
+    -webkit-box-shadow: 0px 0px 12px 5px rgba(107,107,107,1);
+    -moz-box-shadow: 0px 0px 12px 5px rgba(107,107,107,1);
+    box-shadow: 0px 0px 12px 5px rgba(107,107,107,1);
 } 
 
 .logo{
-    background: blue;
 
+    margin: 10px;
 }
 
-.logo figure img{
-    width: 80px;
-
+.main .logo figure img{
+    width: 70px;
 }
 
 .datos{
-    background: yellow;
-    
+    margin: 10px;
 }
 
-.datos div{
-    margin: 20px;
-    display: block;
+.datos .div1{
+    margin: 10px auto;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.datos .div1 input{
+    height: 25px;
+    margin: auto 40px;
+}
+
+.datos .div1 figure img{
+    width: 45px;
+    margin: auto auto auto 50px;
+}
+
+.datos .div1 .img_user img{
+    border-radius: 50px;
+}
+
+.tag_correo{
+    margin: 0 52px 0 0;
+    color: white;
+}
+
+
+.tag_pass{
+    margin: 0 20px 0 0;
+    color: white;
+}
+
+.check {
+    margin: 10px auto;
+    text-align: left;
+    padding: 10px 10px 10px 60px;
+    color: white;
+}
+
+.boton_log{
+    margin: 5px;
+    border: none;
+    padding: 5px;
+    border-radius: 4px;
+    color: black;
+}
+
+
+/*===========================boton cerrar===========================*/
+.cerrar{
+    width: 30px;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    padding: 8px;
+}
+
+
+.cerrar:hover{
+    width: 30px;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    background: rgb(218, 179, 179);
+    border-radius: 50%;
+}
+
+/*===========================FOOTER===========================*/
+
+footer{
+    background: rgb(151, 151, 151);
+    display: flex;
+    justify-content: flex-start;
+    font-family: 'Muli', sans-serif;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    opacity: 0.95;
+}
+
+footer ul{
+
+    list-style: none;
+    margin: 0 30px;
+    padding: 10px;
+}
+
+
+footer ul li{
+    margin: 10px 0px;
+}
+
+footer ul li a{
+    text-decoration: none;
+    color: black;
+    font-size: 15px;
+}
+
+.redes{
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+    bottom: 10px;
+    right: 40px;
+}
+
+.redes figure{
+    margin: 10px;
+}
+.redes figure img{
+    width: 25px;
 }
