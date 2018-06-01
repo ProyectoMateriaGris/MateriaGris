@@ -103,12 +103,13 @@ opacity: 0.8;
     top: 15px;
     background: rgb(218, 179, 179);
     border-radius: 50%;
+    transition-duration:0.3s;
 }
 
 /*===========================FOOTER===========================*/
 
 footer{
-    background: rgb(151, 151, 151);
+    background: rgb(155, 155, 155);
     display: flex;
     justify-content: flex-start;
     font-family: 'Muli', sans-serif;
