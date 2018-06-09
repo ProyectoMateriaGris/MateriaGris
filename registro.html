@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Login</title>
+    <title>Registro</title>
     <link rel="icon" href="images/MG.png">
     <link rel="stylesheet" href="css_login/est_login_registro.css">
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
@@ -34,21 +34,26 @@
         <section class="datos">
             
             <div class="div1">
-                <figure class="img_user"><img src="images/user.png" alt=""></figure>
-                <!--<label class="tag_correo" for="email">Correo</label>-->
-                <input type="email" name="email" id="email_login">
+                <!--<figure class="img_user"><img src="images/user.png" alt=""></figure>-->
+                <label class="tag_correo" for="email">Correo</label>
+                <input placeholder="Ingresa tu correo" type="email" name="email" id="email_reg">
             </div>
             <div class="div1">
-                <figure class="img_pass"><img src="images/contra.png" alt=""></figure>
-                <!--<label class="tag_pass" for="pass">Contraseña</label>-->
-                <input type="password" name="pass" id="pass_login">
+                <!--<figure class="img_pass"><img src="images/contra.png" alt=""></figure>-->
+                <label class="tag_pass" for="pass">Contraseña</label>
+                <input type="password" name="pass" id="pass_reg">
+            </div>
+            <div class="div1">
+                <!--<figure class="img_pass"><img src="images/contra.png" alt=""></figure>-->
+                <label class="tag_pass2" for="pass">Repetir Contraseña</label>
+                <input type="password" name="pass" id="pass_reg2">
             </div>
             <div class="check">   
                 <input type="checkbox" name="recordar" id="recordar">
                 <label class="tag_check" for="recordar">Recordarme</label>
             </div>
             
-            <button class="boton_log" onclick="login()">Ingresar</button>
+            <button class="boton_reg" onclick="registrar()">Registrarse</button>
         </section>
     </div>
 

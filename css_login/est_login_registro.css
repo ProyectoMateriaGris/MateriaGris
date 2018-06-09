@@ -46,7 +46,7 @@ opacity: 0.8;
 }
 
 .datos .div1 input{
-    height: 25px;
+    height: 20px;
     margin: auto 40px;
 }
 
@@ -68,6 +68,16 @@ opacity: 0.8;
 .tag_pass{
     margin: 0 20px 0 0;
     color: white;
+    
+}
+
+/*Tag label del confirmar contraseña del archivo registro.html*/
+
+.tag_pass2{
+    text-align: left;
+    margin: 0 -10px 0 0;
+    color: white;
+    font-size: 13px;
 }
 
 .check {
@@ -76,13 +86,25 @@ opacity: 0.8;
     padding: 10px 10px 10px 60px;
     color: white;
 }
-
+/*===========================boton login===========================*/
 .boton_log{
     margin: 5px;
     border: none;
-    padding: 5px;
+    padding: 10px;
     border-radius: 4px;
-    color: black;
+    color: rgb(255, 255, 255);
+    background: rgb(26, 1, 138);
+}
+
+
+/*===========================boton registro===========================*/
+.boton_reg{
+    margin: 5px;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    color: rgb(255, 255, 255);
+    background: rgb(138, 1, 1);
 }
 
 

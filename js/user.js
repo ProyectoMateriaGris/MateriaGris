@@ -31,8 +31,8 @@ function login(){
     // Aqui con el metodo then se utiliza para hacer acciones cuando el ingreso del usuario se realizo correctamente
     .then(function(){
 
-        window.alert("Usted se logeo exitosamente");
-        console.log("Usuario logeado");
+        window.alert("Usted se logueó exitosamente");
+        console.log("Usuario logueado");
 
         document.location.href = "Bienvenido.html";
 
@@ -42,9 +42,36 @@ function login(){
         // Handle Errors here.
         var errorCode = error.code;
         var errorMessage = error.message;
-        window.alert("Usuario no registrado");
+        window.alert("Usuario no logueado");
         // ...
     });
+}
+
+
+/* FUNCIÓN REGISTRO PARA REGISTRAR USUARIOS NUEVOS */
+function registrar(){
+
+    var email_reg = document.getElementById("email_reg").value; 
+    var pass_reg = document.getElementById("pass_reg").value;
+
+    firebase.auth().createUserWithEmailAndPassword(email_reg, pass_reg)
+    // Aqui con el metodo then se utiliza para hacer acciones cuando el ingreso del usuario se realizo correctamente
+    .then(function(){
+
+        window.alert("Registro exitoso : " + email_reg);
+        console.log("Usuario registrado");
+
+        document.location.href = "Bienvenido.html";
+
+    })
+    
+    .catch(function(error) {
+        // Handle Errors here.
+        var errorCode = error.code;
+        var errorMessage = error.message;
+        window.alert("Usuario no registrado");
+        // ...
+      });
 }
 
 
