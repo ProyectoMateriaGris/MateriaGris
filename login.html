@@ -7,6 +7,15 @@
     <link rel="stylesheet" href="css_login/est_login.css">
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 
+
+    <!--Esta es la conexion a Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
+
+    <!--Inicializacion de elementos de firebase-->
+    <script src="js/conex.js"></script>
+    
+    <script src="js/user.js"></script>
+
 </head>
 <body>
     
@@ -27,19 +36,19 @@
             <div class="div1">
                 <figure class="img_user"><img src="images/user.png" alt=""></figure>
                 <!--<label class="tag_correo" for="email">Correo</label>-->
-                <input type="email" name="email" id="email">
+                <input type="email" name="email" id="email_login">
             </div>
             <div class="div1">
                 <figure class="img_pass"><img src="images/contra.png" alt=""></figure>
                 <!--<label class="tag_pass" for="pass">Contraseña</label>-->
-                <input type="password" name="pass" id="pass">
+                <input type="password" name="pass" id="pass_login">
             </div>
             <div class="check">   
                 <input type="checkbox" name="recordar" id="recordar">
                 <label class="tag_check" for="recordar">Recordarme</label>
             </div>
             
-            <button class="boton_log" onclick="ingresar()">Ingresar</button>
+            <button class="boton_log" onclick="login()">Ingresar</button>
         </section>
     </div>
 
