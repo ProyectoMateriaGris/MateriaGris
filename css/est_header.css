@@ -77,7 +77,7 @@ header{
 
 .menu_nav{ 
     height: 40px;
-    background: rgb(209, 209, 209);
+    background: rgb(133, 241, 237);
 }
 
 .nav{
@@ -104,8 +104,8 @@ header{
 }
 
 .nav li a:hover{
-    color:rgb(255, 255, 255);
-    background: rgb(95, 95, 95);
+    color:rgb(133, 241, 237);
+    background: white;
 }
 
 .nav li a:active{
