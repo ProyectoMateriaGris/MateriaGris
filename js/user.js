@@ -3,18 +3,12 @@
 
 firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
-
-
-
     var usuario = firebase.auth().currentUser;
 
     if(usuario != null){
-        var user_email = user.email;
+        var user_email = usuario.email;
         document.getElementById("name_user").innerHTML = "MateriaGris te da la bienvenida : " + user_email;
     }
-
-    } else {    
-
     }
   });
 
@@ -74,5 +68,9 @@ function registrar(){
       });
 }
 
+/* FUNCIÓN QUE PERMITIRÁ CERRAR SESION A LOS USUARIOS*/
 
-
+function logout(){
+    firebase.auth().signOut();
+    document.location.href ="index.html";
+}
