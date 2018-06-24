@@ -1,0 +1,80 @@
+.menu_nav{ 
+    height: 40px;
+    background: rgb(238, 249, 255);
+}
+
+.ancho-letras{
+	background: url('../images/nosotros.jpg') #000;
+	background-position: center; /*ya que por defecto se coloca al lado izquierdo*/
+	background-attachment: contain;/*para q se adapte a las dimensiones que nosotros definamos*/
+	background-size: cover;
+	top: 150px;
+	position: absolute;
+	width: 100%;
+	text-align: center;
+	z-index: 1;
+
+}
+
+.nosotros{
+	padding-top: 230px;
+	padding-bottom: 230px;
+	width: 80%;
+	margin: auto;
+
+}
+
+.nosotros h1{
+	color: rgb(58, 58, 58);
+	font-family: 'Poppins', sans-serif;
+	font-size: 70px;
+}
+.nosotros p{
+	color: rgb(58, 58, 58);
+	font-size: 20px;
+	font-family: 'Poppins', sans-serif;
+}
+
+footer{
+    background: rgb(155, 155, 155);
+    display: flex;
+    justify-content: flex-start;
+    font-family: 'Muli', sans-serif;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    opacity: 0.95;
+}
+
+footer ul{
+
+    list-style: none;
+    margin: 0 30px;
+    padding: 10px;
+}
+
+
+footer ul li{
+    margin: 10px 0px;
+}
+
+footer ul li a{
+    text-decoration: none;
+    color: black;
+    font-size: 15px;
+}
+
+.redes{
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+    bottom: 10px;
+    right: 40px;
+}
+
+.redes figure{
+    margin: 10px;
+}
+.redes figure img{
+    width: 25px;
+}
