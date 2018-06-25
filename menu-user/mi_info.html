@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Mi Información</title>
+    <link rel="stylesheet" href="../css_perfilUser/nav_sup.css">
+
+    <!--Esta es la conexion a Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
+
+    <!--Inicializacion de elementos de firebase-->
+    <script src="../js/conex.js"></script>
+    
+    <script src="../js/user.js"></script>
+
+</head>
+<body>
+    
+<section class="BarraLateral">
+
+        <div class="logo_princ">
+
+                <figure>
+                    <img src="../images/MG.png" alt="">
+                </figure>
+
+            </div>
+    
+                <div class="info_user">
+                        <a href="../Perfil_user.html">
+                            <figure class="logo_user">
+                                <img src="https://thumbs.dreamstime.com/b/vector-el-icono-del-avatar-del-usuario-para-el-sitio-web-o-el-m%C3%B3vil-45836554.jpg" alt="">
+                            </figure>
+                        </a> 
+                        <a href="../Perfil_user.html">                                      
+                            <div>
+                                    <p>Alumno</p>
+                                    <p id="name_user"></p>
+                            </div>
+                        </a>
+                </div>
+       
+
+        <div class="menu_user">
+
+            <ul>
+                <a href="mi_info.html"><li>Información</li></a> 
+                <a href="mis_cursos.html"><li>Mis Cursos</li></a> 
+                <a href="mi_config.html"><li>Configuración</li></a> 
+                <a href="ayuda.html"><li>Ayuda</li></a> 
+            </ul>
+            <button onclick="logout2()">Cerrar sesión</button> 
+        </div>
+</section>
+
+<div class="contenido_user">
+
+        <h1>Mis Datos Personales</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing e
+                lit. Error, ipsu
+                rem ipsum dolor sit amet consectetur adipisicing e
+                lit. Error, ipsum laborum nihil debitis maxime, ullam, 
+                ab eos facere quos dicta magni est fugit sunt molestia
+                s modi animi odit tenetur dignissimos.rem ipsum dolor sit amet consectetur adipisicing e
+                lit. Error, ipsum laborum nihi est fugit sunt molestia
+                s modi animi odit tenetur dignissimos.m laborum nihil debitis maxime, ullam, 
+                ab eos facere quos dicta magni est fugit sunt molestia
+                s modi animi odit tenetur dignissimos..</p>
+</div>
+
+</body>
+</html>

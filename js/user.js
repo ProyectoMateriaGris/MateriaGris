@@ -7,7 +7,7 @@ firebase.auth().onAuthStateChanged(function(user) {
 
     if(usuario != null){
         var user_email = usuario.email;
-        document.getElementById("name_user").innerHTML = "MateriaGris te da la bienvenida : " + user_email;
+        document.getElementById("name_user").innerHTML = user_email;
     }
     }
   });
@@ -28,7 +28,7 @@ function login(){
         window.alert("Usted se logueó exitosamente");
         console.log("Usuario logueado");
 
-        document.location.href = "Bienvenido.html";
+        document.location.href = "Perfil_user.html";
 
     })
     // Aqui caso contrario no ya que aca se pone cuando hay un error la ingresar el usuario
@@ -55,7 +55,7 @@ function registrar(){
         window.alert("Registro exitoso : " + email_reg);
         console.log("Usuario registrado");
 
-        document.location.href = "Bienvenido.html";
+        document.location.href = "Perfil_user.html";
 
     })
     
@@ -73,4 +73,9 @@ function registrar(){
 function logout(){
     firebase.auth().signOut();
     document.location.href ="index.html";
+}
+
+function logout2(){
+    firebase.auth().signOut();
+    document.location.href ="../index.html";
 }
