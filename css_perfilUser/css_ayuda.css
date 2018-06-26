@@ -1,0 +1,17 @@
+
+/* Aqui se esta añadiendo estilos los compnentes de la pagina 
+ayuda propiamente dicho */
+
+.contenido_user .titulo_AY h1{
+    margin: 10px 30px -20px 30px;
+    padding: 10px;
+}
+
+.contenido_user .titulo_AY p{
+    margin: 10px 30px -20px 30px;
+    padding: 10px 25px;
+}
+
+.User_cont1 .User_cont1__block p{
+    margin: 10px;
+}
