@@ -1,9 +1,12 @@
+
 .contenido_user h1{
+    text-align: center;
     margin: 10px 30px -20px 30px;
     padding: 10px;
 }
 
 .contenido_user p{
+    text-align: center;
     padding: 10px;
     margin: 30px;
 }

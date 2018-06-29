@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>MateriaGris</title>
+
+    <link rel="icon" href="images/MG.png">
+    <link rel="stylesheet" href="css/est_header_user.css">
+    <link rel="stylesheet" href="css/est_body.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Black+Han+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Gugi" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Muli:600" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Muli:300" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Shrikhand" rel="stylesheet">
+
+<!-- Links de JavaSrcipt para Sliders-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+
+<!-- Codigo JavaSrcipt Slider-->
+
+<script>
+    $(document).ready(function(){
+      $('.slider').bxSlider();
+    });
+</script>
+
+<script>
+    $(document).ready(function(){
+        $('.comment').bxSlider();
+    });
+</script>
+
+    <!--Esta es la conexion a Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
+
+    <!--Inicializacion de elementos de firebase-->
+    <script src="js/conex.js"></script>
+
+    <script src="js/user.js"></script>
+
+</head>
+
+<body>
+
+<!--=========================Header========================-->
+    <header>
+
+        <div class="caja_log">
+            <ul class="link_login">
+                    <li><a href="Perfil_user.html"><p id="name_user"></p></a></li>
+            </ul>
+            <button onclick="logout()"><u>Cerrar sesión</u></button>
+        </div>
+ 
+        <input type="search" class="textbox" name="buscar" placeholder="Buscar">
+        
+        <a href="index.html">
+        <figure class="logo">
+            <img src="images/MG.png" alt="">
+            <div class="logo_title">
+                <span class="m">Materia</span>Gris
+            </div>
+        </figure>
+        </a>
+
+    </header>
+
+<!--===============Menu de navegacion=======================-->
+
+    <div class="menu_nav">
+            <ul class="nav">
+                <li><a href="#">Inicio</a></li>
+                <li><a data-scroll href="#CuGr">Cursos</a></li>
+                <li><a data-scroll href="#CuPr">Premium</a></li>
+                <li><a href="Nosotros.html">Nosotros</a> </li>
+            </ul>         
+    </div>
+
+<!--=========Cuerpo de la pagina web=======================-->
+
+    <section class="main">
+        
+        <!-- Slider -->
+
+        <div class="slider">
+
+            <div>
+                <figure>
+                    <img src="images/javalogo.png" alt="logo1">
+                </figure>
+                <div class="slider_description">
+                    <h1>Unity: Lenguaje sin fronteras</h1>
+                    <h2>Se el mejor en todo!!</h2>
+                    <p> Ipsum dolor sit amet consectetur adipisicing elit. Similique, 
+                        cum culpa sint rem labore, quia accusantium nam quibusdam 
+                        voluptatem corporis, ipsa doloremque tempora maxime molestiae 
+                        fugit minus explicabo impedit nulla.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+            </div>
+
+            <div>
+                <figure>
+                    <img src="images/java_orilogo.png" alt="logo2">
+                </figure>
+                <div class="slider_description">
+                    <h1>Con JAVA imagina todo</h1>
+                    <h2>Si te lo propones lo aprenderás</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, 
+                        cum culpa sint rem labore, quia accusantium nam quibusdam 
+                        voluptatem corporis, ipsa doloremque tempora maxime molestiae 
+                        fugit minus explicabo impedit nulla.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+            </div>
+            
+            <div>
+                <figure>
+                    <img src="images/clogo.jpg" alt="logo3">
+                </figure>
+                <div class="slider_description">
+                    <h1>C para todos!!</h1>
+                    <h2>Un lenguaje que nunca perderá su esencia</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, 
+                        cum culpa sint rem labore, quia accusantium nam quibusdam 
+                        voluptatem corporis, ipsa doloremque tempora maxime molestiae 
+                        fugit minus explicabo impedit nulla.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+            </div>
+            
+        </div>
+
+        <!-- Cuerpo Neto-->
+   
+        <div class="contenedor2" id="CuGr">
+            <h1 id="CG"><a href="#">Cursos Gratuitos</a></h1>
+
+                <div class="images_desp">
+                    <figure>
+                        <a href=""><img src="images/phplogo.jpg" alt=""></a>
+                        <p>PHP Básico</p>
+                    </figure>
+                    <figure>
+                        <a href=""><img src="images/jslogo.jpg" alt=""></a>
+                        <p>JavaScript desde cero</p>
+                    </figure>
+                    <figure>
+                        <a href=""><img src="images/csslogo.jpg" alt=""></a>
+                        <p>CSS desde cero</p>
+                    </figure>
+                    <figure>
+                        <a href=""><img src="images/htmllogo.png" alt=""></a>
+                        <p>HTML desde cero</p>
+                    </figure>
+                </div>
+
+                <div class="images_desp">
+                    <figure>
+                        <a href=""><img src="images/Javalogo.jpg" alt=""></a>
+                        <p>Java Básico</p>
+                    </figure>
+                    <figure>
+                        <a href=""><img src="images/c2logo.jpg" alt=""></a>
+                        <p>C++ Básico</p>
+                    </figure>
+                    <figure>
+                        <a href=""><img src="images/pythonlogo.jpg" alt=""></a>
+                        <p>Python Básico</p>
+                    </figure>
+                    <figure>
+                        <a href=""><img src="images/gitlogo.jpg" alt=""></a>
+                        <p>Introducción a Git</p>
+                    </figure>
+                </div>
+
+        </div>
+
+        <div class="contenedor3" id="CuPr">
+            <h1 id="CP"><a href="#">Cursos Premium</a></h1>
+
+                <div class="images_desp">
+                    <figure>
+                        <a href=""><img src="images/htmlcssjs.jpg" alt=""></a>
+                        <p>Desarrollo backend</p>
+                    </figure>
+                    <figure>
+                        <a href=""><img src="images/phpsql.jpg" alt=""></a>
+                        <p>PHP con MySQL</p>
+                    </figure>
+                    <figure>
+                        <a href=""><img src="images/gitlogogit.jpg" alt=""></a>
+                        <p>Git con GitHub</p>
+                    </figure>
+                    <figure>
+                        <a href=""><img src="images/unity.jpg" alt=""></a>
+                        <p>Unity Básico</p>
+                    </figure>
+                </div>
+
+                <div class="images_desp">
+                    <figure>
+                        <a href=""><img src="images/Rlogo.jpg" alt=""></a>
+                        <p>Introducción a Data Science con R</p>
+                    </figure>
+                    <figure>
+                        <a href=""><img src="images/pythonDjango.png" alt=""></a>
+                        <p>Django desde cero</p>
+                    </figure>
+                    <figure>
+                        <a href=""><img src="images/BD.jpg" alt=""></a>
+                        <p>Base de Datos desde cero</p>
+                    </figure>
+                    <figure>
+                        <a href=""><img src="images/ML.jpg" alt=""></a>
+                        <p>Introducción a Machine Learning</p>
+                    </figure>
+                </div>
+
+        </div>
+
+        <div class="comment">
+            <div>
+                <figure>
+                    <img src="images/perfil1.jpg" alt="perfil1">
+                </figure>
+                <div class="slider_comentario">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, 
+                            cum culpa sint rem labore, quia accusantium nam quibusdam 
+                            voluptatem corporis, ipsa doloremque tempora maxime molestiae 
+                            fugit minus explicabo impedit nulla.
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            voluptatem corporis, ipsa doloremque tempora maxime molestiae 
+                            fugit minus explicabo impedit nulla.
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+            </div>
+
+            <div>
+                    <figure>
+                        <img src="images/perfil2.jpg" alt="perfil1">
+                    </figure>
+                    <div class="slider_comentario">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, 
+                                cum culpa sint rem labore, quia accusantium nam quibusdam 
+                                voluptatem corporis, ipsa doloremque tempora maxime molestiae 
+                                fugit minus explicabo impedit nulla.
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                voluptatem corporis, ipsa doloremque tempora maxime molestiae 
+                                fugit minus explicabo impedit nulla.
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+            </div>
+
+            <div>
+                    <figure>
+                        <img src="images/perfil3.jpg" alt="perfil1">
+                    </figure>
+                    <div class="slider_comentario">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, 
+                                cum culpa sint rem labore, quia accusantium nam quibusdam 
+                                voluptatem corporis, ipsa doloremque tempora maxime molestiae 
+                                fugit minus explicabo impedit nulla.
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                voluptatem corporis, ipsa doloremque tempora maxime molestiae 
+                                fugit minus explicabo impedit nulla.
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+            </div>
+        </div>
+
+    </section>
+
+    <footer>
+        <ul>
+            <li> <a href="#CG"> Cursos gratuitos</a></li>
+            <li><a href="#CP">Cursos premium</a></li>
+            <li><a href="">Formas de pago</a></li>
+            <li><a href="">Donaciones</a></li>
+        </ul>
+
+        <ul>
+            <li><a href="Nosotros.html ">¿Quiénes somos?</a></li>
+            <li><a href="">Vision</a></li>
+            <li><a href="">Mision</a></li>
+        </ul>
+
+        <ul>
+            <li><a href="">¿Eres profesor?</a></li>
+            <li><a href="">Artículos</a></li>
+            <li><a href="">Talleres</a></li>
+        </ul>
+
+        <div class="redes">
+           <a href="https://www.facebook.com/" target="_blank"><figure><img src="images/facebook.png" alt=""></figure></a>
+           <a href="https://web.whatsapp.com/" target="_blank"><figure><img src="images/whastapp.png" alt=""></figure></a>
+           <a href="https://twitter.com/?lang=es" target="_blank"><figure><img src="images/twiter.png" alt=""></figure></a>
+           <a href="https://github.com/ProyectoMateriaGris" target="_blank"><figure><img src="images/git.png" alt=""></figure></a>        
+       </div>
+
+    </footer>
+
+
+</body>
+</html>     

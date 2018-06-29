@@ -109,20 +109,8 @@ el perfil de usuario con las diferentes pestañas */
     left: 16%;
     font-family: 'Open Sans', sans-serif;
     width: 84%;
-/* 
-    transition: 0.2s;
-    transform: translate(0px, 0px); */
 }
-/*==================probando deslizador==================*/
 
-/* .contenido_user:hover{
-    width: 94%;
-    transition: 0.5s;
-    transition-delay: 0.1s;
-    transform: translate(-10%, 0px);
-} */
-
-/*====================================*/
 
 .User_cont1 .User_cont1__block h2{
     margin-bottom: 10px;
@@ -131,4 +119,22 @@ el perfil de usuario con las diferentes pestañas */
 .User_cont1{
     padding: 15px 15px 5px 15px;
     margin: 30px;
+}
+
+/* Estilos para el footer */
+
+.redes a figure img {
+    width: 30px;
+}
+
+.redes{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom:8px;
+}
+
+.redes figure{
+    margin: 8px;
 }
