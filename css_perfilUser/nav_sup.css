@@ -1,0 +1,140 @@
+*{
+margin: 0;
+padding: 0;
+}
+
+.logo_princ figure img{
+   width: 100%;
+}
+
+.logo_princ figure{
+   padding: 5px 0;
+   width: 20%;
+   margin: auto;
+ }
+
+
+/*_____________________________________________________*/
+/*_______________________barra lateral______________________________*/
+.BarraLateral{
+    background: rgb(13, 75, 94);
+    position: fixed;
+    width: 16%;
+    height: 100%;
+   /* min-width: 280px;*/
+   font-family: 'Open Sans', sans-serif;
+}
+
+.logo_user{
+    margin: 5px;
+}
+
+.logo_user img{
+    width: 40px;
+    border-radius: 50%;
+
+}
+
+.info_user{
+    border-bottom: 1px solid white;
+    border-top: 1px solid white; 
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.info_user a{
+    font-size: 12px;
+    color: rgb(255, 255, 255);
+    margin: auto 2px;
+    text-decoration: none;
+    
+}
+
+.info_user a:active{
+    color: black;
+}
+
+/*_____________________________________________________*/
+/*______________________Menu lateral_______________________________*/
+
+.menu_user ul li {
+
+    color: rgb(196, 196, 196);
+    padding: 5px 0;
+    margin: 5px auto;
+    list-style: none;
+    font-size: 20px;
+    text-align: center;
+}
+
+.menu_user ul a{
+    text-decoration: none;
+}
+
+.menu_user ul li:hover{
+    background: rgb(212, 212, 212);
+    color: rgb(11, 48, 48);
+    transition: 0.3s;
+}
+
+/*Se le quita la decoracon al boton por*/
+.menu_user button{
+    color: rgb(196, 196, 196);
+    text-decoration: none;
+    background: rgb(13, 75, 94);
+    font-size: 20px;
+    padding: 5px;
+    width: 100%;
+    border-style: none;
+    outline: none; /*Para que no aparezca el molesto cuadro azul al hacer click*/
+    font-family: 'Open Sans', sans-serif;
+}
+.menu_user button:hover{
+    cursor: pointer;
+    background: rgb(122, 46, 46);
+    transition: 0.3s;
+}
+
+
+/*_____________________________________________________*/
+/*__________________________contenido derecho___________________________*/
+
+/* aqui se aplican estilos que las diferentes paginas comparten en comun entre
+el perfil de usuario con las diferentes pestañas */
+
+.contenido_user{
+    background: rgb(212, 212, 212);
+    position: absolute;
+    left: 16%;
+    font-family: 'Open Sans', sans-serif;
+    width: 84%;
+}
+
+
+.User_cont1 .User_cont1__block h2{
+    margin-bottom: 10px;
+}
+
+.User_cont1{
+    padding: 15px 15px 5px 15px;
+    margin: 30px;
+}
+
+/* Estilos para el footer */
+
+.redes a figure img {
+    width: 30px;
+}
+
+.redes{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom:8px;
+}
+
+.redes figure{
+    margin: 8px;
+}

@@ -3,18 +3,12 @@
 
 firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
-
-
-
     var usuario = firebase.auth().currentUser;
 
     if(usuario != null){
-        var user_email = user.email;
-        document.getElementById("name_user").innerHTML = "MateriaGris te da la bienvenida : " + user_email;
+        var user_email = usuario.email;
+        document.getElementById("name_user").innerHTML = user_email;
     }
-
-    } else {    
-
     }
   });
 
@@ -34,7 +28,7 @@ function login(){
         window.alert("Usted se logueó exitosamente");
         console.log("Usuario logueado");
 
-        document.location.href = "Bienvenido.html";
+        document.location.href = "Perfil_user.html";
 
     })
     // Aqui caso contrario no ya que aca se pone cuando hay un error la ingresar el usuario
@@ -61,7 +55,7 @@ function registrar(){
         window.alert("Registro exitoso : " + email_reg);
         console.log("Usuario registrado");
 
-        document.location.href = "Bienvenido.html";
+        document.location.href = "Perfil_user.html";
 
     })
     
@@ -74,5 +68,14 @@ function registrar(){
       });
 }
 
+/* FUNCIÓN QUE PERMITIRÁ CERRAR SESION A LOS USUARIOS*/
 
+function logout(){
+    firebase.auth().signOut();
+    document.location.href ="index.html";
+}
 
+function logout2(){
+    firebase.auth().signOut();
+    document.location.href ="../index.html";
+}

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Ayuda</title>
+    <link rel="stylesheet" href="../css_perfilUser/nav_sup.css">
+    <link rel="stylesheet" href="../css_perfilUser/css_ayuda.css">
+
+        <!-- Fuente de google fonts para las letras -->
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+    <!--Esta es la conexion a Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
+
+    <!--Inicializacion de elementos de firebase-->
+    <script src="../js/conex.js"></script>
+    
+    <script src="../js/user.js"></script> 
+
+</head>
+<body>
+    
+<section class="BarraLateral">
+
+        <div class="logo_princ">
+
+                <figure>
+                    <img src="../images/MG.png" alt="">
+                </figure>
+
+            </div>
+    
+                <div class="info_user">
+                        <a href="../Perfil_user.html">
+                            <figure class="logo_user">
+                                <img src="https://thumbs.dreamstime.com/b/vector-el-icono-del-avatar-del-usuario-para-el-sitio-web-o-el-m%C3%B3vil-45836554.jpg" alt="">
+                            </figure>
+                        </a> 
+                        <a href="../Perfil_user.html">                                      
+                            <div>
+                                    <p>Alumno</p>
+                                    <p id="name_user"></p>
+                            </div>
+                        </a>
+                </div>
+       
+
+        <div class="menu_user">
+
+            <ul>
+                <a href="../index_user.html"><li>Home</li></a>
+                <a href="mi_info.html"><li>Información</li></a> 
+                <a href="mis_cursos.html"><li>Mis Cursos</li></a> 
+                <a href="ayuda.html"><li>Ayuda</li></a> 
+            </ul>
+            <button onclick="logout2()">Cerrar sesión</button> 
+        </div>
+
+        <div class="redes">
+            <a href="https://www.facebook.com/" target="_blank"><figure><img src="../images/facebook.png" alt=""></figure></a>
+            <a href="https://web.whatsapp.com/" target="_blank"><figure><img src="../images/whastapp.png" alt=""></figure></a>
+            <a href="https://twitter.com/?lang=es" target="_blank"><figure><img src="../images/twiter.png" alt=""></figure></a>
+            <a href="https://github.com/ProyectoMateriaGris" target="_blank"><figure><img src="../images/git.png" alt=""></figure></a>        
+        </div>
+</section>
+
+<div class="contenido_user">
+
+    <div class="titulo_AY">
+        <h1>Necesitas Ayuda?</h1>
+        <p>A continuación te presentamos una lista de preguntas frecuentes para que te puedas orientar en algunas dudas que tengas.</p>
+    </div>
+
+    <div class="User_cont1">
+        <div class="User_cont1__block">
+            <h2>¿Qué necesito para crearme una cuenta?</h2>
+            <p>Para crearte una cuenta solo necesitas tener un correo electrónico válido y una contraseña y tan simple
+               con esos dos requisitos ya tendrás una cuenta lista para poder llevar nuestros cursos y obtener beneficios.</p>
+        </div>
+    </div>
+    <div class="User_cont1">
+        <div class="User_cont1__block">
+            <h2>¿Todos los cursos son de un sólo pago?</h2>
+            <p>Si, nuestros cursos tienen un costo único y una vez adquirido el curso podrás guardarlo 
+               para que puedas llaverlo en el momento que más se te acomode.</p>
+        </div>
+    </div>
+    <div class="User_cont1">
+        <div class="User_cont1__block">
+            <h2>¿Qué pasaría si me arrepiento de llevar algún curso?</h2>
+            <p>Para ello es ha implementado un sistema "Demo" que te permitirá ver las primeras clases antes de hacer algún 
+               pago o llevarlo y asi poder decidir si lo llevaras o no.</p>
+        </div>
+    </div>
+
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Mis Cursos</title>
+
+    <link rel="stylesheet" href="../css_perfilUser/nav_sup.css">
+    <link rel="stylesheet" href="../css_perfilUser/css_MisCursos.css">
+
+        <!-- Fuente de google fonts para las letras -->
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+    <!--Esta es la conexion a Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
+
+    <!--Inicializacion de elementos de firebase-->
+    <script src="../js/conex.js"></script>
+    
+    <script src="../js/user.js"></script>
+
+
+</head>
+<body>
+    
+<section class="BarraLateral">
+
+        <div class="logo_princ">
+            <figure>
+                <img src="../images/MG.png" alt="">
+            </figure>
+        </div>
+        
+        <div class="info_user">
+                <a href="../Perfil_user.html">
+                    <figure class="logo_user">
+                        <img src="https://thumbs.dreamstime.com/b/vector-el-icono-del-avatar-del-usuario-para-el-sitio-web-o-el-m%C3%B3vil-45836554.jpg" alt="">
+                    </figure>
+                </a> 
+                <a href="../Perfil_user.html">                                      
+                    <div>
+                            <p>Alumno</p>
+                            <p id="name_user"></p>
+                    </div>
+                </a>
+        </div>
+       
+
+        <div class="menu_user">
+
+            <ul>
+                <a href="../index_user.html"><li>Home</li></a> 
+                <a href="mi_info.html"><li>Información</li></a> 
+                <a href="mis_cursos.html"><li>Mis Cursos</li></a>
+                <a href="ayuda.html"><li>Ayuda</li></a> 
+            </ul>
+            <button onclick="logout2()">Cerrar sesión</button> 
+        </div>
+
+        <div class="redes">
+            <a href="https://www.facebook.com/" target="_blank"><figure><img src="../images/facebook.png" alt=""></figure></a>
+            <a href="https://web.whatsapp.com/" target="_blank"><figure><img src="../images/whastapp.png" alt=""></figure></a>
+            <a href="https://twitter.com/?lang=es" target="_blank"><figure><img src="../images/twiter.png" alt=""></figure></a>
+            <a href="https://github.com/ProyectoMateriaGris" target="_blank"><figure><img src="../images/git.png" alt=""></figure></a>        
+        </div>
+
+
+</section>
+
+<div class="contenido_user">
+
+        <h1 class="titulo_MC">Mis cursos</h1>
+        <div class="User_cont1">
+            <div class="User_cont1__block">
+                <h2>Cursos en proceso</h2>
+                <div class="images_desp">
+                    <figure>
+                        <a href=""><img src="../images/htmlcssjs.jpg" alt=""></a>
+                        <!-- <p>Desarrollo backend</p> -->
+                    </figure>
+                    <figure>
+                        <a href=""><img src="../images/phpsql.jpg" alt=""></a>
+                        <!-- <p>PHP con MySQL</p> -->
+                    </figure>
+                    <figure>
+                        <a href=""><img src="../images/gitlogogit.jpg" alt=""></a>
+                        <!-- <p>Git con GitHub</p> -->
+                    </figure>
+                </div>
+            </div>
+        </div>
+        <div class="User_cont1">
+            <div class="User_cont1__block">
+                <h2>Cursos Completados</h2>
+                <div class="images_desp">
+                    <figure>
+                        <a href=""><img src="../images/csslogo.jpg" alt=""></a>
+                        <!-- <p>CSS desde cero</p> -->
+                    </figure>
+                    <figure>
+                        <a href=""><img src="../images/htmllogo.png" alt=""></a>
+                        <!-- <p>HTML desde cero</p> -->
+                    </figure>
+                </div>
+            </div>
+        </div>
+        <div class="User_cont1">
+            <div class="User_cont1__block">
+                <h2>Recomendados</h2>
+                <div class="images_desp">
+                    <figure>
+                        <a href=""><img src="../images/Rlogo.jpg" alt=""></a>
+                        <!-- <p>Introducción a Data Science con R</p> -->
+                    </figure>
+                    <figure>
+                        <a href=""><img src="../images/pythonDjango.png" alt=""></a>
+                        <!-- <p>Django desde cero</p> -->
+                    </figure>
+                    <figure>
+                        <a href=""><img src="../images/BD.jpg" alt=""></a>
+                        <!-- <p>Base de Datos desde cero</p> -->
+                    </figure>
+                    <figure>
+                        <a href=""><img src="../images/ML.jpg" alt=""></a>
+                        <!-- <p>Introducción a Machine Learning</p> -->
+                    </figure>
+                    <figure>
+                        <a href=""><img src="../images/unity.jpg" alt=""></a>
+                        <!-- <p>Unity Básico</p> -->
+                    </figure>
+                    <figure>
+                        <a href=""><img src="../images/jslogo.jpg" alt=""></a>
+                        <!-- <p>JavaScript desde cero</p> -->
+                    </figure>
+                </div>
+            </div>
+        </div>   
+</div>
+
+</body>
+</html>

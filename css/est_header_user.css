@@ -8,26 +8,53 @@ header{
 }
 
 .caja_log{
-    width: 20%;
+    display: flex;
+    justify-content: space-around;
+    width: 24%;
     position: absolute;
     top: 25px;
-    right: 30px;
+    right: 25px;
 }
+
+/* Estilo para el boton cerrar cesion */
+/* =============================================== */
+.caja_log button{
+    font-family: 'Muli', sans-serif;
+    background: none;
+    color:rgb(78, 78, 78);
+    text-decoration: none;
+    font-size: 15px;
+    padding: 5px;
+    width: 100%;
+    text-decoration: none;
+    border-style: none;
+    outline: none; /*Para que no aparezca el molesto cuadro azul al hacer click*/
+}
+
+.caja_log button:active{
+    color:rgb(252, 0, 0);
+}
+
+.caja_log button:hover{
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* =============================================== */
 
 .link_login{
     font-family: 'Muli', sans-serif;
     list-style: none;
-    display: flex;
-    justify-content: space-around;
+    font-size: 15px;
     padding: 10px;
 }
 
 .link_login a:visited{
-    color:rgb(78, 78, 78);
+    color:rgb(78, 78, 78) 
 }
 
 .link_login a:link{
-    color:rgb(78, 78, 78);
+    color:rgb(78, 78, 78) 
 }
 
 .link_login a:active{
