@@ -82,8 +82,14 @@ opacity: 0.8;
 
 .check {
     margin: 10px auto;
-    text-align: left;
+    /*text-align: left;*/
+    display: flex;
+    justify-content: space-around;
     padding: 10px 10px 10px 60px;
+    color: white;
+}
+
+.check a{
     color: white;
 }
 /*===========================boton login===========================*/
