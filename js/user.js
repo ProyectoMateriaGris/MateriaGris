@@ -57,7 +57,6 @@ function login(){
     });
 }
 
-
 /* FUNCIÓN REGISTRO PARA REGISTRAR USUARIOS NUEVOS */
 function registrar(){
 
@@ -94,4 +93,153 @@ function logout(){
 function logout2(){
     firebase.auth().signOut();
     document.location.href ="../index.html";
+}
+
+// FUNCIONES QUE INTERACCIONAN CON LA BASE DE DATOS DE FIREBASE
+// MUESTRA LOS DATOS AL ACTUALIZAR LA PAGINA
+var contenidoref = firebase.database().ref('Usuarios/');
+contenidoref.on('value', function(snapshot) {
+
+  console.log("Se ha actualizado la base de datos");
+
+  var user = firebase.auth().currentUser;
+  
+  if(user != null){
+          var userId = firebase.auth().currentUser.uid;
+          firebase.database().ref('/Usuarios/' + userId).once('value').then(function(snapshot) {
+            if (document.getElementById("camp1")) {
+            if (snapshot.val()) {
+                var nombre = snapshot.val().Nombre;
+                var app = snapshot.val().Apellidos;
+                var edad = snapshot.val().Edad;
+                var gen = snapshot.val().Genero;
+                var pais = snapshot.val().Pais;
+                //Mostrando datos en los campos
+                document.getElementById("camp1").innerHTML = nombre;
+                document.getElementById("camp2").innerHTML = app;
+                document.getElementById("camp3").innerHTML = edad;
+                document.getElementById("camp4").innerHTML = gen;
+                document.getElementById("camp5").innerHTML = pais;
+            } else {
+
+                    document.getElementById("camp1").innerHTML = "";
+                    document.getElementById("camp2").innerHTML = "";
+                    document.getElementById("camp3").innerHTML = "";
+                    document.getElementById("camp4").innerHTML = "";
+                    document.getElementById("camp5").innerHTML = "";
+                } 
+            }
+            if (document.getElementById("botones")) {
+                document.getElementById("botones").innerHTML = 
+                `
+                <button onclick="editar()">Editar</button>
+                `
+            }
+          });
+  }else{
+      console.log("falta de logueo")
+  }
+
+});
+
+
+function escribir(){
+    var user = firebase.auth().currentUser;
+    var userId = user.uid;
+    var user_name = document.getElementById("user_nom").value;
+    var user_app = document.getElementById("app").value;
+    var user_edad = document.getElementById("edad").value;
+    var user_pais = document.getElementById("pais").value;
+
+    if (document.getElementById("hombre").checked) {
+    var user_gen = document.getElementById("hombre").value;
+    } else {
+    var user_gen = document.getElementById("mujer").value;
+    }
+    
+    firebase.database().ref('Usuarios/' + userId).set({
+        Nombre:user_name,
+        Apellidos:user_app,
+        Edad:user_edad,
+        Genero:user_gen,
+        Pais:user_pais,
+    });
+}
+
+function editar(){
+  var user = firebase.auth().currentUser;
+  
+  if(user != null){
+    // Linea de prueba
+    var userId = firebase.auth().currentUser.uid;
+    firebase.database().ref('/Usuarios/' + userId).once('value').then(function(snapshot) {
+        if (snapshot.val()) {
+            var nombre = snapshot.val().Nombre;
+            var app = snapshot.val().Apellidos;
+            var edad = snapshot.val().Edad;
+            var gen = snapshot.val().Genero;
+            var pais = snapshot.val().Pais;
+            //Mostrando datos en los campos
+            document.getElementById("camp1").innerHTML =
+            `
+            <input type="text" id="user_nom" value="${nombre}">
+            `
+            document.getElementById("camp2").innerHTML =
+            `
+            <input type="text" id="app" value="${app}">
+            `
+            document.getElementById("camp3").innerHTML =
+            `
+            <input type="text" id="edad" value="${edad}">
+            `
+            document.getElementById("camp4").innerHTML =
+            `
+            <input type="radio" name="sexo" id="hombre" value="Hombre">
+            <label for="hombre">Masculino</label>
+            <input type="radio" name="sexo" id="mujer" value="Mujer">
+            <label for="mujer">Femenino</label>
+            `
+            document.getElementById("camp5").innerHTML =
+            `
+            <input type="text" id="pais" value="${pais}">
+            `
+            document.getElementById("botones").innerHTML =
+            `
+            <button onclick="escribir()">Guardar cambios</button>
+            `
+        } else {
+            document.getElementById("camp1").innerHTML =
+            `
+            <input type="text" id="user_nom" >
+            `
+            document.getElementById("camp2").innerHTML =
+            `
+            <input type="text" id="app" >
+            `
+            document.getElementById("camp3").innerHTML =
+            `
+            <input type="text" id="edad" >
+            `
+            document.getElementById("camp4").innerHTML =
+            `
+            <input type="radio" name="sexo" id="hombre" value="Hombre">
+            <label for="hombre">Masculino</label>
+            <input type="radio" name="sexo" id="mujer" value="Mujer">
+            <label for="mujer">Femenino</label>
+            `
+            document.getElementById("camp5").innerHTML =
+            `
+            <input type="text" id="pais">
+            `
+            document.getElementById("botones").innerHTML =
+            `
+            <button onclick="escribir()">Guardar cambios</button>
+            `
+        }
+    // ...
+    });
+    }else{
+        console.log("falta de logueo")
+    }
+
 }

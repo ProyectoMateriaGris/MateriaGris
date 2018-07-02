@@ -10,3 +10,70 @@
     padding: 10px;
     margin: 30px;
 }
+
+/* Estilos para la informacion y la foto del usuario */
+
+.datos_usuario{
+    background: purple;
+    display: flex;
+    justify-content: center;
+
+}
+
+.conten_foto{
+    background: green;
+    margin: auto 10px;
+    height: 200px;
+    width: 18%;
+}
+
+.conten_foto #foto img{
+    width: 100%;
+    height: 200px;
+
+}
+
+.tabla_datos{
+    background: red;
+    border-collapse:separate;
+    border-spacing:2px;
+    border-color:rgb(0, 0, 0);
+    margin: auto 30px;
+}
+.tabla_datos tr td{
+    padding: 5px;
+}
+
+.tabla_datos tr th{
+    padding: 5px;
+}
+
+/* input file estilo */
+.file-input {
+    visibility: hidden;
+    width: 0;
+    position: relative;
+  }
+  .file-input::before {
+    content: 'Subir foto';
+    display: inline-block;
+    background: -webkit-linear-gradient(top, #f9f9f9, #e3e3e3);
+    border: 1px solid #999;
+    border-radius: 3px;
+    padding: 5px 8px;
+    outline: none;
+    white-space: nowrap;
+    -webkit-user-select: none;
+    cursor: pointer;
+    text-shadow: 1px 1px #fff;
+    font-weight: 700;
+    font-size: 10pt;
+    visibility: visible;
+    position: absolute;
+  }
+  .file-input:hover::before {
+    border-color: black;
+  }
+  .file-input:active::before {
+    background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
+  }

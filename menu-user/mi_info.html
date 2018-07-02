@@ -4,11 +4,13 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Mi Información</title>
+
+    <link rel="icon" href="../images/MG.png">
     <link rel="stylesheet" href="../css_perfilUser/nav_sup.css">
     <link rel="stylesheet" href="../css_perfilUser/css_MiInfo.css">
 
-        <!-- Fuente de google fonts para las letras -->
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <!-- Fuente de google fonts para las letras -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 
     <!--Esta es la conexion a Firebase -->
     <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
@@ -33,7 +35,7 @@
     
                 <div class="info_user">
                         <a href="../Perfil_user.html">
-                            <figure class="logo_user">
+                            <figure class="logo_user" id="min_foto" >
                                 <img src="https://thumbs.dreamstime.com/b/vector-el-icono-del-avatar-del-usuario-para-el-sitio-web-o-el-m%C3%B3vil-45836554.jpg" alt="">
                             </figure>
                         </a> 
@@ -72,13 +74,65 @@
     <div class="User_cont1_p">
         <div class="User_cont1__block">
             <p class="t1">
-                <b>MateriaGris</b> te da la bienvenida .
+                <b>MateriaGris</b> te da la bienvenida..!
             </p>
+
             <!-- a su plataforma web para que puedas aprender los Cursos
                 de pogramación que se encuentran demandados hoy en la actualidad. Esperamos que sea de tua agrado y puedas
                 aprovechar al máximo todas las clases impartidas. Buena Suerte!! :) -->
         </div>
-    </div>   
+    </div>
+
+    <div class="datos_usuario">
+        <div class="conten_foto">
+            <figure id="foto" >
+                <img src="https://vignette.wikia.nocookie.net/animatedmusclemen/images/0/0c/Tumblr_luijcmvhwj1qly4io.jpg/revision/latest?cb=20180125172739" alt="">
+            </figure>
+            <div id="subirf">
+            </div>
+        </div>
+    
+        <table class="tabla_datos" border="1">
+            <tr>
+                <th>Tipo de Usuario</th>
+                <td>Alumno</td>
+            </tr>
+            <tr>
+                <th>Nombres</th>
+                <td id="camp1">
+
+                </td>
+            </tr>
+            <tr>
+                <th>Apellidos</th>
+                <td id="camp2">
+
+                </td>
+            </tr>
+            <tr>
+                <th>Edad</th>
+                <td id="camp3">
+                </td>
+            </tr>
+            <tr>
+                <th>Género</th>
+                <td id="camp4">
+                </td>
+            </tr>
+            <tr>
+                <th>País</th>
+                <td id="camp5">
+
+                </td>
+            </tr>
+        </table>
+        <div id="botones">
+            <button onclick="editar()">Editar</button>
+        </div>
+
+    </div>
+
+    
     
 </div>
 
