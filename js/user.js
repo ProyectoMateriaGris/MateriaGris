@@ -5,10 +5,26 @@ firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
     var usuario = firebase.auth().currentUser;
 
-    if(usuario != null){
-        var user_email = usuario.email;
-        document.getElementById("name_user").innerHTML = user_email;
-    }
+        if(usuario != null){
+            var user_email = usuario.email;
+
+
+            if (document.getElementById("caja_log")) {
+                document.getElementById("caja_log").innerHTML = 
+                `
+                <div class="caja_log2">
+                <a href="Perfil_user.html"><p>${user_email}</p></a>
+                <button onclick="logout()"><u>Cerrar sesión</u></button>
+                </div>
+                `
+            } else {
+                document.getElementById("name_user").innerHTML= user_email 
+            }
+
+
+            
+
+        }
     }
   });
 

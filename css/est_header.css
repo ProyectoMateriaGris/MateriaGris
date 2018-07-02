@@ -7,19 +7,65 @@ header{
     height: 112px;
 }
 
-.caja_log{
+/* Estilo para el boton cerrar cesion y css que se utilizara
+   para cuando cambie de iniciar sesion a correo de usuario */
+/* =============================================== */
+    .caja_log2{
+        font-family: 'Muli', sans-serif;
+        width: 24%;
+        display: flex;
+        justify-content: space-around;
+        position: absolute;
+        top: 25px;
+        right: 20px;
+        font-size: 15px;
+    }
+
+    .caja_log2 a:visited{
+        color:rgb(78, 78, 78);
+    }
+    
+    .caja_log2 a:link{
+        color:rgb(78, 78, 78);
+    }
+    
+    .caja_log2 a:active{
+        color:rgb(252, 0, 0);
+    }
+
+    .caja_log2 button{
+        font-family: 'Muli', sans-serif;
+        background: none;
+        color:rgb(78, 78, 78);
+        text-decoration: none;
+        font-size: 15px;
+        text-decoration: none;
+        border-style: none;
+        outline: none; /*Para que no aparezca el molesto cuadro azul al hacer click*/
+    }
+    
+    .caja_log2 button:active{
+        color:rgb(252, 0, 0);
+    }
+    
+    .caja_log2 button:hover{
+        cursor: pointer;
+        transition: 0.3s;
+    }
+    
+/* =============================================== */
+/* Esta porcion pertenece a el index sin loguearse */
+
+.link_login{
+    font-family: 'Muli', sans-serif;
     width: 20%;
     position: absolute;
     top: 25px;
     right: 30px;
-}
 
-.link_login{
-    font-family: 'Muli', sans-serif;
     list-style: none;
     display: flex;
     justify-content: space-around;
-    padding: 10px;
 }
 
 .link_login a:visited{
@@ -33,7 +79,7 @@ header{
 .link_login a:active{
     color:rgb(252, 0, 0);
 }
-
+/* =============================================== */
 .textbox{
     background: rgb(247, 247, 247);
     border-radius: 6px;
