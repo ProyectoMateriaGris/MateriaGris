@@ -1,6 +1,10 @@
 
 /* Aqui se esta añadiendo estilos los compnentes de la pagina 
 ayuda propiamente dicho */
+body{
+    background: rgb(202, 202, 202);
+}
+
 
 .contenido_user .titulo_AY h1{
     margin: 10px 30px -20px 30px;

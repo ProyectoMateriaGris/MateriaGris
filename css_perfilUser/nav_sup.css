@@ -104,7 +104,7 @@ padding: 0;
 el perfil de usuario con las diferentes pestañas */
 
 .contenido_user{
-    background: rgb(212, 212, 212);
+    /* background: rgb(88, 88, 88); */
     position: absolute;
     left: 16%;
     font-family: 'Open Sans', sans-serif;

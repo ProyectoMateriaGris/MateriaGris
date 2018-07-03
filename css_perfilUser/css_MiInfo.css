@@ -1,3 +1,6 @@
+body{
+    background: rgb(202, 202, 202);
+}
 
 .contenido_user h1{
     text-align: center;
@@ -14,66 +17,71 @@
 /* Estilos para la informacion y la foto del usuario */
 
 .datos_usuario{
-    background: purple;
-    display: flex;
-    justify-content: center;
+    /* background: rgb(167, 167, 167); */
+    position: relative;
+    bottom:-30px;
+    width: 55%;
+    height: 350px;
+    margin: 0 auto;
+    padding: 10px;
 
 }
 
 .conten_foto{
-    background: green;
-    margin: auto 10px;
-    height: 200px;
-    width: 18%;
+    /* background: green; */
+    width: 35%;
+    float: left;
+    height: 80%;
+
+}
+
+.conten_foto #foto{
+
+    height: 100%;
+
 }
 
 .conten_foto #foto img{
     width: 100%;
-    height: 200px;
+    height: 100%;
+    border-radius: 3%;
 
 }
+
 
 .tabla_datos{
-    background: red;
-    border-collapse:separate;
-    border-spacing:2px;
-    border-color:rgb(0, 0, 0);
-    margin: auto 30px;
-}
-.tabla_datos tr td{
-    padding: 5px;
+float: right;
+width: 61%;
+height: 80%;
+margin: 0 2%;
+border-collapse: collapse;
+border: 4px solid black;
 }
 
-.tabla_datos tr th{
-    padding: 5px;
+.tabla_datos tr {
+    text-align: center;
 }
 
-/* input file estilo */
-.file-input {
-    visibility: hidden;
-    width: 0;
-    position: relative;
-  }
-  .file-input::before {
-    content: 'Subir foto';
-    display: inline-block;
-    background: -webkit-linear-gradient(top, #f9f9f9, #e3e3e3);
-    border: 1px solid #999;
-    border-radius: 3px;
-    padding: 5px 8px;
+.tabla_datos tr td input{
+    background: none;
+    border-style: none;
     outline: none;
-    white-space: nowrap;
-    -webkit-user-select: none;
-    cursor: pointer;
-    text-shadow: 1px 1px #fff;
-    font-weight: 700;
-    font-size: 10pt;
-    visibility: visible;
-    position: absolute;
-  }
-  .file-input:hover::before {
-    border-color: black;
-  }
-  .file-input:active::before {
-    background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
-  }
+    font-size: 17px;
+}
+
+#botones{
+    /* background: green; */
+
+    padding: 10px 0; 
+    text-align: center;
+    clear: both;
+}
+
+#botones button{
+    font-size: 20px;
+    background: rgb(13, 75, 94);
+    padding: 8px 20px;
+    outline: none;
+    border-radius: 8px;
+    text-decoration: none;
+}
