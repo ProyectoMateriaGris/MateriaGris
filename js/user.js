@@ -26,7 +26,25 @@ firebase.auth().onAuthStateChanged(function(user) {
 
         }
     }
-  });
+});
+
+function verificador(){
+    
+
+    firebase.auth().onAuthStateChanged(function(user) {
+
+        if (user) {
+            document.location.href="curso_registradoPHP.html";
+        }else{
+             document.location.href = "login.html";
+
+        }
+    });
+
+
+}
+
+  
 
 
 /* FUNCION LOGIN PARA INGRESO DE USUARIOS EXISTENTES */

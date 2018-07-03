@@ -8,7 +8,16 @@
 	<link rel="icon" href="images/MG.png">
     <link rel="stylesheet" href="css/est_header.css">
 	<link rel="stylesheet" type="text/css" href="css_cursos/css_php.css">
-	<link href="https://fonts.googleapis.com/css?family=Gugi" rel="stylesheet"><!--Logo-->
+    <link href="https://fonts.googleapis.com/css?family=Gugi" rel="stylesheet"><!--Logo-->
+    
+         <!--Esta es la conexion a Firebase -->
+         <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
+
+         <!--Inicializacion de elementos de firebase-->
+         <script src="js/conex.js"></script>
+    
+    
+        <script src="js/user.js"></script>
 
 </head>
 <body>
@@ -16,7 +25,7 @@
 <!--=========================Header========================-->
     <header>
 
-        <div class="caja_log">
+        <div id="caja_log">
             <ul class="link_login">
                     <li><a href="login.html">Iniciar sesion</a></li>
                     <li><a href="registro.html">Registrarse</a></li>
