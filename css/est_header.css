@@ -4,7 +4,10 @@
 
 header{
     background: white;
-    height: 112px;
+    height: 110px;
+    width: 100%;
+    /*position: fixed;
+    z-index: 10;*/
 }
 
 /* Estilo para el boton cerrar cesion y css que se utilizara
@@ -122,7 +125,9 @@ header{
 /*=============================MENU DE NAVEGACION==============================*/
 
 .menu_nav{ 
+    /*padding-top: 112px;*//*junto con el position del header*/
     height: 40px;
+    width: 100%;
     background: rgb(133, 241, 237);
 }
 

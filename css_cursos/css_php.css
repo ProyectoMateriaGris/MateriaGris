@@ -1,0 +1,115 @@
+.main{
+    height: 750px;
+}
+.Caja_curso{
+    height: 250px;
+    background: url('../images/fondbanner1.png') rgb(58,58,58);
+    background-size: cover;
+    text-align: left;
+    display: flex;
+    justify-content: center;
+}
+
+.Caja_curso img{
+    /*padding-top: 2.5%;*/
+    margin-top: 2.5%;
+    height: 70%;
+    border: solid 4px white;
+    border-radius: 5%;
+}
+.Descripcion_curso{
+    /*background: purple;*/
+    color: white;
+    width: 60%;
+    padding-top: 2.5%;
+    padding-right: 5%;
+}
+
+.Descripcion_curso h1{
+    padding-top: .25%;
+   color: white;
+   font-family: 'Poppins', sans-serif;
+   font-size: 60px;
+}
+.Descripcion_curso p{
+    color: white;
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+.contenido{
+    /*background: #f4f0f0;*/
+    display: flex;
+    justify-content: center;
+}
+.contenido_items{
+    background: #f9f9f9;
+    margin-top: 2.5%;
+    margin-bottom: 2.5%;
+    width: 70%;
+    border: solid 3px #beb9e6;
+}
+.contenido_items h2{
+    padding-top: 3%;
+    padding-left: 3%;
+    font-family: 'Poppins', sans-serif;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+.contenido_item{
+    padding-left: 3%;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    list-style: none;
+    margin-bottom: 7px;
+}
+
+.boton_inicio{
+    margin-left: 45%;
+    border: none;
+    padding: 20px;
+    border-radius: 20PX;
+    font-size: 20px;
+    color: white;
+    background: rgb(26, 1, 138);
+}
+
+
+
+/*===========================FOOTER===========================*/
+
+footer{
+    background: rgb(155, 155, 155);
+    display: flex;
+    justify-content: flex-start;
+    padding: 30px 30px 30px 60px;
+    font-family: 'Muli', sans-serif;
+    position: relative; 
+}
+
+footer ul{
+    list-style: none;
+    margin: 0 30px;
+    padding: 0;
+}
+
+
+footer ul li{
+    margin: 10px 0px;
+}
+
+footer ul li a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+.redes{
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+    bottom: 10px;
+    right: 40px;
+}
+
+.redes figure{
+    margin: 10px;
+}
