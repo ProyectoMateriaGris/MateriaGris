@@ -166,7 +166,7 @@ contenidoref.on('value', function(snapshot) {
             if (document.getElementById("botones")) {
                 document.getElementById("botones").innerHTML = 
                 `
-                <button onclick="editar()">Editar</button>
+                <button onclick="editar()">EDITAR</button>
                 `
             }
           });
@@ -190,6 +190,11 @@ function escribir(){
     } else {
     var user_gen = document.getElementById("mujer").value;
     }
+
+    if (document.getElementById('file-input').files[0] != null) {
+        upload();
+    }
+ 
     
     firebase.database().ref('Usuarios/' + userId).set({
         Nombre:user_name,
@@ -198,6 +203,48 @@ function escribir(){
         Genero:user_gen,
         Pais:user_pais,
     });
+
+    var user = firebase.auth().currentUser;
+  
+    if(user != null){
+            var userId = firebase.auth().currentUser.uid;
+            firebase.database().ref('/Usuarios/' + userId).once('value').then(function(snapshot) {
+              if (document.getElementById("camp1")) {
+              if (snapshot.val()) {
+                  var nombre = snapshot.val().Nombre;
+                  var app = snapshot.val().Apellidos;
+                  var edad = snapshot.val().Edad;
+                  var gen = snapshot.val().Genero;
+                  var pais = snapshot.val().Pais;
+                  //Mostrando datos en los campos
+                  document.getElementById("camp1").innerHTML = nombre;
+                  document.getElementById("camp2").innerHTML = app;
+                  document.getElementById("camp3").innerHTML = edad;
+                  document.getElementById("camp4").innerHTML = gen;
+                  document.getElementById("camp5").innerHTML = pais;
+                  document.getElementById("subirf").innerHTML ="";
+              } else {
+  
+                      document.getElementById("camp1").innerHTML = "";
+                      document.getElementById("camp2").innerHTML = "";
+                      document.getElementById("camp3").innerHTML = "";
+                      document.getElementById("camp4").innerHTML = "";
+                      document.getElementById("camp5").innerHTML = "";
+                  } 
+              }
+              if (document.getElementById("botones")) {
+                  document.getElementById("botones").innerHTML = 
+                  `
+                  <button onclick="editar()">EDITAR </button>
+                  `
+              }
+            });
+    }else{
+        console.log("falta de logueo")
+    }
+  
+
+
 }
 
 function editar(){
@@ -239,8 +286,13 @@ function editar(){
             `
             document.getElementById("botones").innerHTML =
             `
-            <button onclick="escribir()">Guardar cambios</button>
+            <button onclick="escribir()">GUARDAR CAMBIOS</button>
             `
+            document.getElementById("subirf").innerHTML=
+            `
+            <input type="file" id="file-input">
+            `
+
         } else {
             document.getElementById("camp1").innerHTML =
             `
@@ -267,7 +319,11 @@ function editar(){
             `
             document.getElementById("botones").innerHTML =
             `
-            <button onclick="escribir()">Guardar cambios</button>
+            <button onclick="escribir()">GUARDAR CAMBIOS</button>
+            `
+            document.getElementById("subirf").innerHTML=
+            `
+            <input type="file" id="file-input">
             `
         }
     // ...
@@ -276,4 +332,71 @@ function editar(){
         console.log("falta de logueo")
     }
 
+}
+
+
+function upload(){
+    var storageRef = firebase.storage().ref();
+    //Nombre del archivo que estamos subiendo
+    var nombre_archivo = document.getElementById('file-input').files[0].name;
+    console.log(nombre_archivo);
+    //Referencia a la ruta del archivo
+    var ImagesRef = storageRef.child('images/' + nombre_archivo);
+
+
+    var file = document.getElementById('file-input').files[0];
+    ImagesRef.put(file).then(function(snapshot) {
+    console.log('Uploaded a blob or file!');
+
+    // Se coloca la funcion buscar dentro de esta parte porque ocurrira despues de que se suba 
+    // la imagen con exito
+    search(nombre_archivo);
+    });
+
+
+}
+
+function search(nombre_archivo){
+    var storageRef = firebase.storage().ref();
+    // var nombre_archivo = document.getElementById('file-input').files[0].name;
+    console.log(nombre_archivo)
+    // Create a reference to the file we want to download
+    var starsRef = storageRef.child('images/' + nombre_archivo);
+    
+    // Get the download URL
+    starsRef.getDownloadURL().then(function(url) {
+      // Insert url into an <img> tag to "download"
+    //   console.log(url);
+    
+      var img_buscada = `
+      <img src="${url}"></img>
+    
+      `
+    
+      //Mostrando datos en el div "Lista_contenidos"
+      document.getElementById("foto").innerHTML = img_buscada
+      document.getElementById("min_foto").innerHTML = img_buscada
+    
+    }).catch(function(error) {
+    
+      // A full list of error codes is available at
+      // https://firebase.google.com/docs/storage/web/handle-errors
+      switch (error.code) {
+        case 'storage/object_not_found':
+          // File doesn't exist
+          break;
+    
+        case 'storage/unauthorized':
+          // User doesn't have permission to access the object
+          break;
+    
+        case 'storage/canceled':
+          // User canceled the upload
+          break;
+    
+        case 'storage/unknown':
+          // Unknown error occurred, inspect the server response
+          break;
+      }
+    });
 }
