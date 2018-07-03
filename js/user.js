@@ -44,6 +44,22 @@ function verificador(){
 
 }
 
+function verificador2(){
+    
+
+    firebase.auth().onAuthStateChanged(function(user) {
+
+        if (user) {
+            document.location.href="curso_registrado_desarrollo_frontend.html";
+        }else{
+             document.location.href = "login.html";
+
+        }
+    });
+
+
+}
+
   
 
 
