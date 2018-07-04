@@ -1,0 +1,159 @@
+
+header{
+    background: white;
+    -webkit-transition: background-color 0.5s;
+    height: 110px;
+    width: 100%;
+    position: fixed;
+    z-index: 10; 
+}
+
+.logo {
+    margin-top: 1%;
+}
+
+
+.Caja_curso{
+    padding-top: 110px;
+    height: 250px;
+    background: url('../images/fondbanner1.png') white;
+    background-size: cover;
+    text-align: left;
+    display: flex;
+    justify-content: center;
+}
+
+.Caja_curso img{
+    /*padding-top: 2.5%;*/
+    margin-top: 2.5%;
+    height: 70%;
+    border: solid 4px rgb(190, 185, 230);
+    border-radius: 5%;
+}
+.Descripcion_curso{
+    /*background: purple;*/
+    color: white;
+    width: 60%;
+    padding-top: 2.5%;
+    padding-right: 5%;
+}
+
+.Descripcion_curso h1{
+   padding-top: .25%;
+   color: white;
+   font-family: 'Poppins', sans-serif;
+   font-size: 60px;
+}
+.Descripcion_curso p{
+    color: white;
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+.contenido{
+    /*background: #f4f0f0;*/
+    display: flex;
+    justify-content: center;
+    padding-bottom:
+}
+.material_curso{
+   padding-top: 3%;
+}
+
+.material_curso h3{
+    font-family: 'Poppins', sans-serif;
+    padding-left: 9%;
+    padding-right: 30%;
+    font-size: 25px;
+    padding-bottom: 2%;
+}
+
+.material_lista{
+    padding-left: 10%;
+    margin-right: 20%;
+}
+.material_lista a{
+    text-decoration: none;
+}
+.contenido_items{
+    background: #f9f9f9;
+    margin-top: 2.5%;
+    margin-bottom: 2.5%;
+    width: 70%;
+    border: solid 3px #beb9e6;
+    padding-bottom: 3%;
+}
+.contenido_items h2{
+    padding-top: 3%;
+    padding-left: 36%;
+    font-family: 'Poppins', sans-serif;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+.contenido_item{
+    background: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    
+    padding-top: 1.5%;
+    padding-bottom: 1.5%;
+    padding-left: 1.5%;
+
+    margin-bottom: 7px;
+    margin-top: 7px;
+
+    list-style: none;
+    border: solid 3px white;
+    border-radius: 5px;
+
+    color: rgb(4, 183, 123);
+}
+.contenido_item img{
+    width: 2.8%;
+    padding-right: 2%;
+}
+
+.contenido_item:hover{
+    border: solid 3px skyblue;
+}
+
+
+
+/*===========================FOOTER===========================*/
+
+footer{
+    background: rgb(155, 155, 155);
+    display: flex;
+    justify-content: flex-start;
+    padding: 30px 30px 30px 60px;
+    font-family: 'Muli', sans-serif;
+    position: relative;
+    margin-top: 180%; 
+}
+
+footer ul{
+    list-style: none;
+    margin: 0 30px;
+    padding: 0;
+}
+
+
+footer ul li{
+    margin: 10px 0px;
+}
+
+footer ul li a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+.redes{
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+    bottom: 10px;
+    right: 40px;
+}
+
+.redes figure{
+    margin: 10px;
+}
