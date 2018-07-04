@@ -7,7 +7,13 @@ firebase.auth().onAuthStateChanged(function(user) {
 
         if(usuario != null){
             var user_email = usuario.email;
+            var userId = firebase.auth().currentUser.uid;
+            firebase.database().ref('/Usuarios/' + userId).once('value').then(function(snapshot) {
+            var pho = snapshot.val().Image;
+            document.getElementById("min_foto").innerHTML = `<img src="${pho}"></img>`
+            });
 
+            
 
             if (document.getElementById("caja_log")) {
                 document.getElementById("caja_log").innerHTML =
@@ -64,7 +70,7 @@ function verificador2(){
 function validar(){
 
 
-  if (document.getElementById('num').value == "123456")
+  if (document.getElementById('num').value == "0123456789")
   {
 
     document.location.href = "curso_registrado_desarrollo_frontend.html"
@@ -163,12 +169,15 @@ contenidoref.on('value', function(snapshot) {
                 var edad = snapshot.val().Edad;
                 var gen = snapshot.val().Genero;
                 var pais = snapshot.val().Pais;
+                var pho = snapshot.val().Image;
                 //Mostrando datos en los campos
                 document.getElementById("camp1").innerHTML = nombre;
                 document.getElementById("camp2").innerHTML = app;
                 document.getElementById("camp3").innerHTML = edad;
                 document.getElementById("camp4").innerHTML = gen;
                 document.getElementById("camp5").innerHTML = pais;
+                document.getElementById("foto").innerHTML = `<img src="${pho}"></img>`
+                document.getElementById("min_foto").innerHTML = `<img src="${pho}"></img>`
             } else {
 
                     document.getElementById("camp1").innerHTML = "";
@@ -210,15 +219,16 @@ function escribir(){
     //los demas campos menos la foto de perfil
     //Con esta procion de codigo se sube la imagen al storage de Firebase
     if (document.getElementById('file-input').files[0] != null) {
-        upload();
+        upload(userId);
+    }else{
+        firebase.database().ref('Usuarios/' + userId).update({
+            Nombre:user_name,
+            Apellidos:user_app,
+            Edad:user_edad,
+            Genero:user_gen,
+            Pais:user_pais
+        });
     }
-      firebase.database().ref('Usuarios/' + userId).set({
-          Nombre:user_name,
-          Apellidos:user_app,
-          Edad:user_edad,
-          Genero:user_gen,
-          Pais:user_pais
-      });
 
     // Aqui se pone toda esta porcion de codigo porque mostrara cada vez que el usuario presione sel boton guardar
     var user = firebase.auth().currentUser;
@@ -352,17 +362,60 @@ function editar(){
 }
 
 
-function upload(){
+function upload(userId){
+    var user = firebase.auth().currentUser;
+    var userId = user.uid;
+    var user_name = document.getElementById("user_nom").value;
+    var user_app = document.getElementById("app").value;
+    var user_edad = document.getElementById("edad").value;
+    var user_pais = document.getElementById("pais").value;
+
+    if (document.getElementById("hombre").checked) {
+    var user_gen = document.getElementById("hombre").value;
+    } else {
+    var user_gen = document.getElementById("mujer").value;
+    }
+
     var storageRef = firebase.storage().ref();
     //Nombre del archivo que estamos subiendo
     var nombre_archivo = document.getElementById('file-input').files[0].name;
     //Referencia a la ruta del archivo
     var ImagesRef = storageRef.child('images/' + nombre_archivo);
-
-
     var file = document.getElementById('file-input').files[0];
     ImagesRef.put(file).then(function(snapshot) {
     console.log('Archivo subido a Cloud Storage');
+    var storageRef = firebase.storage().ref();
+    //   var nombre_archivo = document.getElementById('file-input').files[0].name;
+      var starsRef = storageRef.child('images/' + nombre_archivo);
+      starsRef.getDownloadURL().then(function(url) {
+        //aqui por ahora quiero que muestre la imagen en un div con id "foto" deberia mostrarlo
+        //pero me sale los errores 404 y 403 y no me muestra
+        //lo que deberia hacer aqui es guardar la url en una variable para pasarla aqui y subirla
+        firebase.database().ref('Usuarios/' + userId).set({
+
+            Nombre:user_name,
+            Apellidos:user_app,
+            Edad:user_edad,
+            Genero:user_gen,
+            Pais:user_pais,
+            Image: url
+        });
+       document.getElementById("foto").innerHTML= `<img src="${url}"></img>`
+   
+      }).catch(function(error) {
+   
+        switch (error.code) {
+          case 'storage/object_not_found':
+            break;
+          case 'storage/unauthorized':
+            break;
+   
+          case 'storage/canceled':
+            break;
+          case 'storage/unknown':
+            break;
+        }
+      });
 
     // Se coloca la funcion buscar dentro de esta parte porque ocurrira despues de que se suba
     // la imagen con exito
