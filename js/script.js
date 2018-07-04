@@ -12,13 +12,18 @@ $(document).ready(function(){
 			if(!flag){
 				$("header").css({"background-color": "black"});
 
-				$(".link_login li a").css({"color":"white"});
+				$(".caja_log2 a").css({"color":"white"});
+				$(".caja_log2 button").css({"color":"white"});
+				$(".logo_title").css({"color":"white"});
+				
 				flag = true;
 			}
 		}else{
 			if(flag){
 				$("header").css({"background-color": "white"});
-				$(".link_login li a").css({"color":"black"});
+				$(".caja_log2 a").css({"color":"black"});
+				$(".caja_log2 button").css({"color":"black"});
+				$(".logo_title").css({"color":"rgb(58, 58, 58)"});
 				flag = false;
 			}
 		}
