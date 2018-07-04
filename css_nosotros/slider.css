@@ -4,7 +4,7 @@
 }
 
 .ancho-letras{
-	background: url('../images/nosotros.jpg') #000;
+	background: url('../images/nosotros.jpg') #c9e0ee;
 	background-position: center; /*ya que por defecto se coloca al lado izquierdo*/
 	background-attachment: contain;/*para q se adapte a las dimensiones que nosotros definamos*/
 	background-size: cover;
