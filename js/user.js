@@ -10,7 +10,7 @@ firebase.auth().onAuthStateChanged(function(user) {
 
 
             if (document.getElementById("caja_log")) {
-                document.getElementById("caja_log").innerHTML = 
+                document.getElementById("caja_log").innerHTML =
                 `
                 <div class="caja_log2">
                 <a href="Perfil_user.html"><p>${user_email}</p></a>
@@ -18,18 +18,18 @@ firebase.auth().onAuthStateChanged(function(user) {
                 </div>
                 `
             } else {
-                document.getElementById("name_user").innerHTML= user_email 
+                document.getElementById("name_user").innerHTML= user_email
             }
 
 
-            
+
 
         }
     }
 });
 
 function verificador(){
-    
+
 
     firebase.auth().onAuthStateChanged(function(user) {
 
@@ -45,7 +45,7 @@ function verificador(){
 }
 
 function verificador2(){
-    
+
 
     firebase.auth().onAuthStateChanged(function(user) {
 
@@ -64,24 +64,24 @@ function verificador2(){
 function validar(){
 
 
-  if (document.getElementById('num').value == "123456") 
+  if (document.getElementById('num').value == "123456")
   {
 
     document.location.href = "curso_registrado_desarrollo_frontend.html"
   }else{
-    window.alert("tarjeta invalida");
+    window.alert("Su número de Tarjeta es inválida");
   }
 
 }
 
-  
+
 
 
 /* FUNCION LOGIN PARA INGRESO DE USUARIOS EXISTENTES */
 
 function login(){
 
-    var email = document.getElementById("email_login").value; 
+    var email = document.getElementById("email_login").value;
     var pass = document.getElementById("pass_login").value;
 
 
@@ -108,7 +108,7 @@ function login(){
 /* FUNCIÓN REGISTRO PARA REGISTRAR USUARIOS NUEVOS */
 function registrar(){
 
-    var email_reg = document.getElementById("email_reg").value; 
+    var email_reg = document.getElementById("email_reg").value;
     var pass_reg = document.getElementById("pass_reg").value;
 
     firebase.auth().createUserWithEmailAndPassword(email_reg, pass_reg)
@@ -118,10 +118,10 @@ function registrar(){
         window.alert("Registro exitoso : " + email_reg);
         console.log("Usuario registrado");
 
-        document.location.href = "Perfil_user.html";
+        document.location.href = "menu-user/mi_info.html";
 
     })
-    
+
     .catch(function(error) {
         // Handle Errors here.
         var errorCode = error.code;
@@ -145,13 +145,14 @@ function logout2(){
 
 // FUNCIONES QUE INTERACCIONAN CON LA BASE DE DATOS DE FIREBASE
 // MUESTRA LOS DATOS AL ACTUALIZAR LA PAGINA
+//y aqui se pone porque se usara la primera vez que el usuario cargue la pagina y quedremos que muestre los ultimos datos guardados
 var contenidoref = firebase.database().ref('Usuarios/');
 contenidoref.on('value', function(snapshot) {
 
   console.log("Se ha actualizado la base de datos");
 
   var user = firebase.auth().currentUser;
-  
+
   if(user != null){
           var userId = firebase.auth().currentUser.uid;
           firebase.database().ref('/Usuarios/' + userId).once('value').then(function(snapshot) {
@@ -175,10 +176,10 @@ contenidoref.on('value', function(snapshot) {
                     document.getElementById("camp3").innerHTML = "";
                     document.getElementById("camp4").innerHTML = "";
                     document.getElementById("camp5").innerHTML = "";
-                } 
+                }
             }
             if (document.getElementById("botones")) {
-                document.getElementById("botones").innerHTML = 
+                document.getElementById("botones").innerHTML =
                 `
                 <button onclick="editar()">EDITAR</button>
                 `
@@ -205,65 +206,67 @@ function escribir(){
     var user_gen = document.getElementById("mujer").value;
     }
 
+    //Esto ocurre cuando se quiere actualizar losde
+    //los demas campos menos la foto de perfil
+    //Con esta procion de codigo se sube la imagen al storage de Firebase
     if (document.getElementById('file-input').files[0] != null) {
         upload();
     }
- 
-    
-    firebase.database().ref('Usuarios/' + userId).set({
-        Nombre:user_name,
-        Apellidos:user_app,
-        Edad:user_edad,
-        Genero:user_gen,
-        Pais:user_pais,
-    });
+      firebase.database().ref('Usuarios/' + userId).set({
+          Nombre:user_name,
+          Apellidos:user_app,
+          Edad:user_edad,
+          Genero:user_gen,
+          Pais:user_pais
+      });
 
+    // Aqui se pone toda esta porcion de codigo porque mostrara cada vez que el usuario presione sel boton guardar
     var user = firebase.auth().currentUser;
-  
+
     if(user != null){
             var userId = firebase.auth().currentUser.uid;
             firebase.database().ref('/Usuarios/' + userId).once('value').then(function(snapshot) {
-              if (document.getElementById("camp1")) {
-              if (snapshot.val()) {
-                  var nombre = snapshot.val().Nombre;
-                  var app = snapshot.val().Apellidos;
-                  var edad = snapshot.val().Edad;
-                  var gen = snapshot.val().Genero;
-                  var pais = snapshot.val().Pais;
+               if (document.getElementById("camp1")) {
+                   if (snapshot.val()) {
+                   var nombre = snapshot.val().Nombre;
+                   var app = snapshot.val().Apellidos;
+                   var edad = snapshot.val().Edad;
+                   var gen = snapshot.val().Genero;
+                   var pais = snapshot.val().Pais;
                   //Mostrando datos en los campos
-                  document.getElementById("camp1").innerHTML = nombre;
-                  document.getElementById("camp2").innerHTML = app;
-                  document.getElementById("camp3").innerHTML = edad;
-                  document.getElementById("camp4").innerHTML = gen;
-                  document.getElementById("camp5").innerHTML = pais;
+                   document.getElementById("camp1").innerHTML = nombre;
+                   document.getElementById("camp2").innerHTML = app;
+                   document.getElementById("camp3").innerHTML = edad;
+                   document.getElementById("camp4").innerHTML = gen;
+                   document.getElementById("camp5").innerHTML = pais;
                   document.getElementById("subirf").innerHTML ="";
-              } else {
-  
-                      document.getElementById("camp1").innerHTML = "";
-                      document.getElementById("camp2").innerHTML = "";
-                      document.getElementById("camp3").innerHTML = "";
-                      document.getElementById("camp4").innerHTML = "";
-                      document.getElementById("camp5").innerHTML = "";
-                  } 
-              }
-              if (document.getElementById("botones")) {
-                  document.getElementById("botones").innerHTML = 
+                } else {
+
+                       document.getElementById("camp1").innerHTML = "";
+                       document.getElementById("camp2").innerHTML = "";
+                       document.getElementById("camp3").innerHTML = "";
+                       document.getElementById("camp4").innerHTML = "";
+                       document.getElementById("camp5").innerHTML = "";
+                   }
+            }
+            if (document.getElementById("botones")) {
+                  document.getElementById("botones").innerHTML =
                   `
                   <button onclick="editar()">EDITAR </button>
                   `
-              }
-            });
+            }
+        });
     }else{
         console.log("falta de logueo")
     }
-  
+
 
 
 }
 
 function editar(){
   var user = firebase.auth().currentUser;
-  
+
   if(user != null){
     // Linea de prueba
     var userId = firebase.auth().currentUser.uid;
@@ -353,61 +356,61 @@ function upload(){
     var storageRef = firebase.storage().ref();
     //Nombre del archivo que estamos subiendo
     var nombre_archivo = document.getElementById('file-input').files[0].name;
-    console.log(nombre_archivo);
     //Referencia a la ruta del archivo
     var ImagesRef = storageRef.child('images/' + nombre_archivo);
 
 
     var file = document.getElementById('file-input').files[0];
     ImagesRef.put(file).then(function(snapshot) {
-    console.log('Uploaded a blob or file!');
+    console.log('Archivo subido a Cloud Storage');
 
-    // Se coloca la funcion buscar dentro de esta parte porque ocurrira despues de que se suba 
+    // Se coloca la funcion buscar dentro de esta parte porque ocurrira despues de que se suba
     // la imagen con exito
-    search(nombre_archivo);
+    //search(); //Se le pasa el nombre de
     });
 
 
 }
 
-function search(nombre_archivo){
+function search(){
+
     var storageRef = firebase.storage().ref();
-    // var nombre_archivo = document.getElementById('file-input').files[0].name;
+    var nombre_archivo = document.getElementById('file-input').files[0].name;
     console.log(nombre_archivo)
     // Create a reference to the file we want to download
     var starsRef = storageRef.child('images/' + nombre_archivo);
-    
+
     // Get the download URL
     starsRef.getDownloadURL().then(function(url) {
       // Insert url into an <img> tag to "download"
-    //   console.log(url);
-    
-      var img_buscada = `
-      <img src="${url}"></img>
-    
-      `
-    
+       console.log(url);
+
+    //   var img_buscada = `
+    //   <img src="${url}"></img>
+
+    //   `
+
       //Mostrando datos en el div "Lista_contenidos"
-      document.getElementById("foto").innerHTML = img_buscada
-      document.getElementById("min_foto").innerHTML = img_buscada
-    
+    //   document.getElementById("foto").innerHTML = img_buscada
+    //   document.getElementById("min_foto").innerHTML = img_buscada
+
     }).catch(function(error) {
-    
+
       // A full list of error codes is available at
       // https://firebase.google.com/docs/storage/web/handle-errors
       switch (error.code) {
         case 'storage/object_not_found':
           // File doesn't exist
           break;
-    
+
         case 'storage/unauthorized':
           // User doesn't have permission to access the object
           break;
-    
+
         case 'storage/canceled':
           // User canceled the upload
           break;
-    
+
         case 'storage/unknown':
           // Unknown error occurred, inspect the server response
           break;
