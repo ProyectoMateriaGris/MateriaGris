@@ -50,7 +50,7 @@ function verificador2(){
     firebase.auth().onAuthStateChanged(function(user) {
 
         if (user) {
-            document.location.href="credit-card/assets/Creditcard.html";
+            document.location.href="Creditcard.html";
             //document.location.href="curso_registrado_desarrollo_frontend.html";
         }else{
              document.location.href = "login.html";
